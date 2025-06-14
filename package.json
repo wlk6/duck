@@ -1,0 +1,51 @@
+{
+  "name": "hello_vue3",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@tensorflow-models/coco-ssd": "^2.2.3",
+    "@tensorflow-models/mobilenet": "^2.1.1",
+    "@tensorflow/tfjs": "^4.22.0",
+    "axios": "^1.7.9",
+    "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.11.3",
+    "chart.js": "^4.4.8",
+    "choices.js": "^11.0.3",
+    "dayjs": "^1.11.13",
+    "dropzone": "^6.0.0-beta.2",
+    "echarts": "^5.6.0",
+    "element-china-area-data": "^6.1.0",
+    "element-plus": "^2.9.3",
+    "elui-china-area-dht": "^2.0.0",
+    "html2canvas": "^1.4.1",
+    "jquery": "^3.7.1",
+    "jquery-nice-select": "^1.1.0",
+    "jspdf": "^3.0.1",
+    "jszip": "^3.10.1",
+    "notifyjs": "^3.0.0",
+    "overlayscrollbars": "^2.11.0",
+    "pinia": "^2.3.1",
+    "socket.io-client": "^4.8.1",
+    "swiper": "^11.2.2",
+    "vue": "^3.5.13",
+    "vue-multiselect": "^3.2.0",
+    "vue-router": "^4.5.0",
+    "vue-select": "^4.0.0-beta.6",
+    "vue3-emoji": "^3.0.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.1",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.5.1",
+    "tailwindcss": "^4.0.3",
+    "vite": "^6.0.5",
+    "vite-plugin-vue-devtools": "^7.6.8",
+    "vite-plugin-vue-setup-extend": "^0.4.0"
+  }
+}

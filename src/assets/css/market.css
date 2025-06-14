@@ -1,0 +1,371 @@
+/* 表格 */
+.table-container {
+  margin: 20px;
+  overflow-x: auto;
+}
+
+.modern-table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.modern-table thead tr {
+  background: linear-gradient(45deg, #4CAF50, #45a049);
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.modern-table th,
+.modern-table td {
+  padding: 15px 20px;
+  text-align: center;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.modern-table th {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.modern-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.modern-table tbody tr:nth-of-type(even) {
+  background-color: #f8f8f8;
+}
+
+.modern-table tbody tr:last-of-type {
+  border-bottom: 2px solid #4CAF50;
+}
+
+.modern-table tbody tr:hover {
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .table-container {
+      width: 100%;
+      overflow-x: auto;
+  }
+}
+.bi{
+  width: 30px!important;
+}
+.bi-arrow-right{
+  color: #0b6dbc;
+}
+.bi-sort-up,.up{
+  color: #da0a0a;
+}
+.bi-sort-down,.down{
+  color: #0ada37;
+}
+/* 分页 */
+.pagination-wrapper {
+  font-size: 0;
+  position: relative;
+  text-align: center;
+  margin-top: 40px; 
+  padding-bottom: 20px;
+  margin-bottom: 100px;
+}
+@keyframes pagination-container--animation-prev {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(18px); }
+}
+
+@keyframes pagination-container--animation-next {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-18px); }
+}
+
+.transition-prev .pagination-container {
+  animation: pagination-container--animation-prev 0.3s forwards;
+}
+
+.transition-next .pagination-container {
+  animation: pagination-container--animation-next 0.3s forwards;
+}
+
+.little-dot {
+  width: 6px;
+  height: 6px;
+  background: #a1a1a1;
+  border-radius: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 6px;
+  position: relative;
+  z-index: 10;
+}
+
+.little-dot--first,
+.little-dot--last {
+  z-index: 5;
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(0px);
+  }
+
+  100% {
+    transform: translateX(-18px);
+  }
+}
+
+.transition-prev .little-dot--first {
+  animation: slideLeft 0.4s 0.3s forwards cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+@keyframes little-dot--first--animation {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.transition-next .little-dot--first {
+  animation: little-dot--last--animation 0.3s forwards;
+}
+
+@keyframes little-dot--last--animation {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.transition-prev .little-dot--last {
+  animation: little-dot--last--animation 0.3s forwards;
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(18px);
+    opacity: 1;
+  }
+}
+
+.transition-next .little-dot--last {
+  animation: slideRight 0.4s 0.3s forwards cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.big-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+  background: #1d8113;
+  position: absolute;
+  top: 50%;
+  right: -6px;
+  transform: translateY(-50%);
+}
+
+.transition-next .big-dot {
+  right: auto;
+  left: -6px;
+}
+
+.big-dot-container {
+  width: 18px;
+  height: 18px;
+  border-radius: 100%;
+  position: absolute;
+  top: 50%;
+  right: 3px;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.transition-next .big-dot-container {
+  right: auto;
+  left: 3px;
+}
+
+@keyframes big-dot-container--animation-prev {
+  0% { transform: translateY(-50%); }
+  100% { transform: translateY(-50%) rotate(-179deg); }
+}
+
+@keyframes big-dot-container--animation-next {
+  0% { transform: translateY(-50%); }
+  100% { transform: translateY(-50%) rotate(-181deg); }
+}
+
+.transition-prev .big-dot-container {
+  animation: big-dot-container--animation-prev 0.3s forwards;
+}
+
+.transition-next .big-dot-container {
+  animation: big-dot-container--animation-next 0.3s forwards;
+}
+
+.btns {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  fill: #a1a1a1;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btns:hover {
+  opacity: 0.6;
+}
+
+.btn--next {
+  left: 52.5%; 
+  top: 10%;
+}
+
+.btn--prev {
+  right: 53%;
+  top: 10%;
+
+}
+.pagination-container{
+  width: 60%;
+  margin: 0 auto;
+}
+
+/* 没有更多数据了 */
+.nomore {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  height: 400px;
+  overflow: hidden;
+  margin: 0 auto;
+  width: 75%;
+}
+
+:root {
+  margin: 0;
+  padding: 0;
+  --white: #f2f5f5;
+  --black: #121212;
+  --gray: #959695;
+}
+
+.error__container {
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 0 10px;
+  color: #000000;
+}
+
+.error__code {
+  width: 100%;
+  margin: 0 auto;
+  font-size: 6rem;
+  font-weight: 800;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+p:first-of-type {
+  animation: fall 1s linear;
+  transform: rotateZ(-20deg);
+  margin: 50px 0;
+}
+
+p:last-of-type {
+  animation: fall 1.8s linear;
+  transform: rotateZ(8deg);
+  margin: 50px 0;
+}
+
+p:nth-of-type(2) {
+  color: #149928;
+  animation: bounce 1.2s 1.8s linear forwards;
+  opacity: 0;
+  margin: 0 10px;
+}
+
+.error__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 0 3%;
+  width: 300px;
+  text-align: center;
+}
+
+.error__description {
+  font-size: 0.9rem;
+  text-align: justify;
+  line-height: 1.6;
+  padding: 0 10%;
+  color: var(--gray);
+}
+
+.action {
+  font: inherit;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  background-color: #149928;
+  color: var(--white);
+}
+
+.action:hover {
+  opacity: 0.8;
+}
+
+@media screen and (min-width:48rem) {
+  .error__description {
+      padding: 0;
+  }
+}
+
+@keyframes fall {
+  0% {
+      transform: translateY(-100vh);
+  }
+
+  100% {
+      transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+
+  0%,
+  40%,
+  75%,
+  95% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+
+  15% {
+      transform: translateY(-25px);
+  }
+
+  65% {
+      transform: translateY(-15px);
+  }
+
+  85% {
+      transform: translateY(-5px);
+  }
+
+  100% {
+      transform: rotateZ(45deg);
+      opacity: 1;
+  }
+}
